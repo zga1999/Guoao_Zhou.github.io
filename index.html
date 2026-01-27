@@ -5,19 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zhou GuoAo</title>
   <style>
-    body { max-width: 760px; margin: 60px auto; padding: 0 16px; font-family: Arial, sans-serif; line-height: 1.6; }
-    h1 { margin-bottom: 8px; }
-    .meta { color: #555; }
-    a { text-decoration: none; }
+    :root{
+      --text:#111;
+      --muted:#666;
+      --border:#e8e8e8;
+      --bg:#fff;
+    }
+    body{
+      max-width: 860px;
+      margin: 56px auto;
+      padding: 0 18px;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a{ text-decoration: none; color: inherit; }
+    a:hover{ text-decoration: underline; }
+
+    .header{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .avatar{
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      background: #f6f6f6;
+      flex: 0 0 auto;
+    }
+    h1{
+      margin:0;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .subtitle{
+      margin-top:6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section{
+      margin-top: 20px;
+    }
+    .section h2{
+      font-size: 16px;
+      margin: 0 0 8px 0;
+    }
+
+    .meta{
+      color: var(--muted);
+      font-size: 14px;
+      margin: 10px 0 0 0;
+    }
+    .meta ul{
+      margin: 8px 0 0 0;
+      padding-left: 18px;
+    }
+    .meta li{
+      margin: 4px 0;
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: #fff;
+    }
+
+    /* 手机适配 */
+    @media (max-width: 520px){
+      .header{ align-items:flex-start; }
+      .avatar{ width: 72px; height: 72px; }
+      h1{ font-size: 24px; }
+    }
   </style>
 </head>
 <body>
-  <h1>Zhou GuoAo</h1>
-  <p class="meta">
-    Email: <a href="mailto:zhouguoao@whut.edu.cn">zhouguoao@whut.edu.cn</a>
-  </p>
 
-  <!-- 可选：加一两行简介 -->
-  <p>Research interests: XXX, XXX.</p>
+  <div class="header">
+    <!-- 头像：把 src 改成你的头像文件路径/链接 -->
+    <img class="avatar" src="avatar.jpg" alt="Zhou GuoAo Avatar" />
+
+    <div>
+      <h1>Zhou GuoAo</h1>
+      <div class="subtitle">Wuhan University of Technology · Researcher / Student</div>
+
+      <!-- 3个邮箱 -->
+      <div class="meta">
+        <strong>Email</strong>
+        <ul>
+          <li><a href="mailto:zhouguoao@whut.edu.cn">zhouguoao@whut.edu.cn</a> (Work)</li>
+          <li><a href="mailto:guoaozhou@outlook.com">guoaozhou@outlook.com</a> (Personal)</li>
+          <li><a href="mailto:guoaozhou@gmail.com">guoaozhou@gmail.com</a> (Backup)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 个人简介 -->
+  <div class="section">
+    <div class="card">
+      <h2>About</h2>
+      <p style="margin:0;color:var(--muted);">
+        I am a researcher/student at Wuhan University of Technology. My work focuses on
+        <strong>XXX</strong>, <strong>XXX</strong>, and <strong>XXX</strong>. I am interested in building practical
+        systems and publishing in top-tier venues. Feel free to reach out for collaboration.
+      </p>
+    </div>
+  </div>
+
+  <!-- 研究方向（可选） -->
+  <div class="section">
+    <div class="card">
+      <h2>Research Interests</h2>
+      <p style="margin:0;color:var(--muted);">
+        XXX · XXX · XXX
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
